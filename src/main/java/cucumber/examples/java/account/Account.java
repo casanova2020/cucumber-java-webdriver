@@ -7,6 +7,18 @@ public abstract class Account {
 
     private int number;
     private int balance;
+    private String name;
+
+    protected String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    protected Account() {
+    }
 
     public void setBalance(int balance) {
         this.balance = balance;
@@ -57,5 +69,7 @@ public abstract class Account {
         }
         balance = balance - c.getAmount();
         c.setStatus("PASS");
+
+
     }
 }

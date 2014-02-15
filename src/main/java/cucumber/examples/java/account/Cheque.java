@@ -14,6 +14,7 @@ public class Cheque {
     private String status;
     private int chequeNumber;
     private int amount;
+    public String chequeName;
 
     public void validateCheque() {
         if (chequeDate.isBefore(DateTime.now())) {

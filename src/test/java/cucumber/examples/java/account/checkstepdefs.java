@@ -54,6 +54,7 @@ public class checkstepdefs {
         C = new Cheque();
         C.chequeDate = new DateTime().plusDays(1);
         C.setChequeNumber(12345);
+        C.chequeName = "ravi";
     }
 
     @Then("^the cheque should pass$")

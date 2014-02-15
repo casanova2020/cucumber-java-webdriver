@@ -21,3 +21,9 @@ Feature:  Cheques
     When Cheque is deposited
     Then Cheque should bounce
 
+  Scenario: Cheque name should match account name
+    Given a cheque with valid details
+    When Cheque is deposited
+    Then Cheque should pass
+
+

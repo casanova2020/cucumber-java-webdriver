@@ -41,6 +41,7 @@ public class validateMyStepdefs {
     @When("^Cheque is deposited$")
     public void Cheque_is_deposited() throws Throwable {
             c.validateCheque();
+
         if (a != null ) {
             a.withdraw(c);
         }
