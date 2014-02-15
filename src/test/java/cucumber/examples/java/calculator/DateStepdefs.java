@@ -34,5 +34,5 @@ public class DateStepdefs {
     @Then("^the result should be (.+)$")
     public void the_result_should_be(String expectedResult) {
         assertEquals(expectedResult, result);
-    }
+}
 }

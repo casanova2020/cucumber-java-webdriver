@@ -13,14 +13,19 @@ public class Cheque {
     public DateTime chequeDate;
     private String status;
     private int chequeNumber;
+    private int amount;
 
-    public void deposit() {
+    public void validateCheque() {
         if (chequeDate.isBefore(DateTime.now())) {
             setStatus("BOUNCE");
             return;
         }
         if (chequeNumber <= 0) {
             setStatus("INVALID");
+            return;
+        }
+        if(amount <= 0) {
+            setStatus("BOUNCE");
             return;
         }
         setStatus("PASS");
@@ -40,5 +45,13 @@ public class Cheque {
 
     public void setChequeNumber(int chequeNumber) {
         this.chequeNumber = chequeNumber;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 }
