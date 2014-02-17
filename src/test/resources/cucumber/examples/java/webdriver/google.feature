@@ -6,6 +6,7 @@ Feature: Test Google search
   Scenario Outline: Test the web driver
     When I enter "<url>"
     Then "<value>" page should appear
+    And  I close the browser
 
   Examples:
     |url | value |

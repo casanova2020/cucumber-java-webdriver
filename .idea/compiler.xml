@@ -29,10 +29,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="java-calculator" />
+        <module name="mobileiq" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="java-calculator" target="1.6" />
+      <module name="mobileiq" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

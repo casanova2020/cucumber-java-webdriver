@@ -1,4 +1,4 @@
-package cucumber.examples.java.calculator;
+package cucumber.examples.java.webdriver;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;

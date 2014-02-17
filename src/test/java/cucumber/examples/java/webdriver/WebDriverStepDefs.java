@@ -1,4 +1,4 @@
-package cucumber.examples.java.account;
+package cucumber.examples.java.webdriver;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
