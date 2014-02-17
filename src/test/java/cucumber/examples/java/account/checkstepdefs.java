@@ -1,6 +1,5 @@
 package cucumber.examples.java.account;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -40,7 +39,7 @@ public class checkstepdefs {
 
     @When("^the cheque is deposited$")
     public void the_cheque_is_deposited() throws Throwable {
-             C.deposit();
+             C.validateCheque();
     }
 
     @Given("^a cheque with invalid number$")
@@ -55,6 +54,7 @@ public class checkstepdefs {
         C = new Cheque();
         C.chequeDate = new DateTime().plusDays(1);
         C.setChequeNumber(12345);
+        C.chequeName = "ravi";
     }
 
     @Then("^the cheque should pass$")

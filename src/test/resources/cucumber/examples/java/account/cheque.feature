@@ -1,6 +1,6 @@
 Feature: Cheque
 
-  Scenario: Cheque Date should not  be past date
+  Scenario: Cheque Date should not be past date
     Given a cheque with past date
     When the cheque is deposited
     Then the cheque should bounce

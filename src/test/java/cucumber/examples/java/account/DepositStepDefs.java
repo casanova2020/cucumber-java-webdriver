@@ -19,7 +19,7 @@ public class DepositStepDefs {
         a.setBalance(100);
     }
 
-    @When("^i deposit the amount (\\d+) into the account$")
+    @When("^i validateCheque the amount (\\d+) into the account$")
     public void i_deposit_the_amount_into_the_account(int arg1) throws Throwable {
         a.deposit(arg1);
     }
@@ -35,7 +35,7 @@ public class DepositStepDefs {
         assertEquals(a.getBalance(),arg1);
     }
 
-    @Then("^the account should not accept any deposit$")
+    @Then("^the account should not accept any validateCheque$")
     public void the_account_should_not_accept_any_deposit() throws Throwable {
         try {
             a.deposit(100);

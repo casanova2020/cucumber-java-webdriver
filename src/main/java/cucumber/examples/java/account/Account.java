@@ -7,6 +7,18 @@ public abstract class Account {
 
     private int number;
     private int balance;
+    private String name;
+
+    protected String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    protected Account() {
+    }
 
     public void setBalance(int balance) {
         this.balance = balance;
@@ -30,7 +42,7 @@ public abstract class Account {
         }
 
         if(amount <= 0) {
-            throw new IllegalStateException("Invalid deposit amount.");
+            throw new IllegalStateException("Invalid validateCheque amount.");
         }
         balance = balance + amount;
     }
@@ -44,5 +56,20 @@ public abstract class Account {
             throw new IllegalStateException("No enough funds");
         }
         balance = balance - amount;
+    }
+
+    public void withdraw(Cheque c) throws IllegalStateException {
+        if(number <= 0) {
+            c.setStatus("BOUNCE");
+            return;
+        }
+        if(balance - c.getAmount() <= 0) {
+            c.setStatus("BOUNCE");
+            return;
+        }
+        balance = balance - c.getAmount();
+        c.setStatus("PASS");
+
+
     }
 }
