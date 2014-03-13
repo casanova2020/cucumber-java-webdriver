@@ -52,10 +52,10 @@ public class LoginStepDefs {
 
         try {
             WebElement email = driver.findElement(emailBy);
-            email.sendKeys("rkumar@quark.com");
+            email.sendKeys("xxx");
 
             WebElement password = driver.findElement(passwordBy);
-            password.sendKeys("m0b1le123");
+            password.sendKeys("xxxx");
         } catch (NoSuchElementException e) {
             fail();
         }
@@ -106,10 +106,10 @@ public class LoginStepDefs {
 
         try {
             WebElement email = driver.findElement(emailBy);
-            email.sendKeys("quarkqa5@gmail.com");
+            email.sendKeys("xxx@gmail.com");
 
             WebElement password = driver.findElement(passwordBy);
-            password.sendKeys("m0b1le120");
+            password.sendKeys("xxx");
 
         } catch (NoSuchElementException e) {
             fail();
