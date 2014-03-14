@@ -147,6 +147,7 @@ public class WebDriverStepDefs {
 
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         ChromeOptions options = new ChromeOptions();
+        options.setBinary(chromeDriverPath);
         return new ChromeDriver(options);
     }
 
