@@ -141,7 +141,7 @@ public class WebDriverStepDefs {
             } else if (isWinOS) {
                 chromeDriverPath = userDir + "/tools/win/chromedriver.exe";
             } else if (isLinuxOS) {
-                chromeDriverPath = userDir + "/tools/linux64/chromedriver";
+                chromeDriverPath = userDir + "/tools/linux32/chromedriver";
             }
         }
 
