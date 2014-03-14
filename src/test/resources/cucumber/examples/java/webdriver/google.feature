@@ -10,8 +10,8 @@ Feature: Test Google search
 
   Examples:
     |url | value |
-    |http://www.google.com|google|
-    |http://www.yahoo.com|yahoo |
+    |www.google.com|google|
+    |www.yahoo.com|yahoo |
 
 
   Scenario: Login example
